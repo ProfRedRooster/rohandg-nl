@@ -11,7 +11,48 @@ canvas {
   position: fixed;
   top: 0px;
 }
+.counter {
+  position:relative;
+  padding-top:30vh;
+}
 
+.counter h1 {
+  position:relative;
+  text-align:center;
+  margin:0;
+  line-height: .625;
+  z-index:2;
+  transform-origin: bottom center;
+}
+
+.dish {
+  color:#e89c2b;
+  position:absolute;
+  width:1em;
+  height:1em;
+  margin-top:-.75em;
+  margin-left:-.5em;
+  font-size:2rem;
+  top:0;
+  transform:translateY(-3em);
+  transition-duration:.75s;
+  transition-timing-function:ease-in;
+  transition-property:transform;
+  z-index:1;
+}
+
+.dish.drop {
+  transform:translateY(30vh);
+}
+
+.nommer {
+  position:absolute;
+  bottom:2em;
+  margin-left:-1em;
+  color:rgba(0,0,0,.5);
+  font-size:1.5rem;
+  transform-origin:bottom center;
+}
 a {
   color: #bbbbc4;
   text-decoration: none;
