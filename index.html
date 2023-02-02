@@ -9,7 +9,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <style>
-
+ @media (max-width:629px) {
+  img#optionalstuff {
+    display: none;
+  }
+}
  
         body {
     position: relative; 
@@ -20,7 +24,7 @@
   #section0 {padding-top:50px;height:200px;color: #fff; background-color: rebeccapurple;}
   #section1 {padding-top:50px;height:500px;color: #fff; background-color: white;}
   #section2 {padding-top:50px;height:500px;color: #fff; background-color: paleturquoise;}
-  #section3 {padding-top:50px;height:500px;color: #fff; background-color: orange;}
+
   #section4 {padding-top:40px;height:450px;color: #fff; background-color: hotpink;}   
   #section5 {padding-top:30px;height:115px;color: #fff; background-color: lightgray;} 
   </style>
@@ -50,7 +54,7 @@
           <li><a href="#section0">Home</a></li>
           <li><a href="#section1">Public projects</a></li>
           <li><a href="#section2">Private projects</a></li>
-          <li><a href="#section3">Sites</a></li>
+
           <li><a href="#section4">Contact</a></li>
         </ul>
       </div>
@@ -67,7 +71,7 @@
 <div id="section1" class="container-fluid">
     
     <h1 style="color:darkblue">Public projects</h1>
-    <img src="https://ghchart.rshah.org/409ba5/profredrooster" alt="Profredrooster Github Chart" />
+    <img id="optionalstuff" src="https://ghchart.rshah.org/409ba5/profredrooster" alt="Profredrooster Github Chart" />
     <ul style="color:darkblue"><li><a href="http://app.rohandg.nl:8880/api/v1/t/3ec1a5d3d7d85d2e29f4baedbdd4e7ba83cf1f4e/d60a456a/fit_2048" target="_blank" rel="noopener noreferrer" style="color:darkblue">DIY Hydrogen generator</a></li></ul>
     <ul style="color:darkblue"><li><a href="https://github.com/ProfRedRooster/djogbot" target="_blank" rel="noopener noreferrer" style="color:darkblue">Djog bot</a></li></ul>
     <ul style="color:darkblue"><li><a href="https://github.com/ProfRedRooster/screensaver" target="_blank" rel="noopener noreferrer" style="color:darkblue"> A processing screensaver</a></li></ul>
@@ -93,15 +97,8 @@
 
     
      </div>
-    
-<div id="section3" class="container-fluid">
-    
-      <h1>Sites</h1>
-    
-      <ul><li><a href="https://rohandg.nl/" target="_blank" rel="noopener noreferrer">My personal site about my projects</a></li></ul>
-      <ul><li><a href="https://incendere.nl/" target="_blank" rel="noopener noreferrer">My ... site</a></li></ul>
-    
-</div>
+  
+
     
 <div id="section4" class="container-fluid">
 <h1>Contact</h1>
