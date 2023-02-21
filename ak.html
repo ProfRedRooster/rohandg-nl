@@ -1,0 +1,30 @@
+<div class="roomtour">
+<iframe src="https://maps.wrld3d.com/fullembed/?mapscene=eb1d73c" name="willowdent-virtualniprohlidka" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowfullscreen></iframe>
+</div>
+<style>/*Overlay block*/
+.roomtour {
+width: 100%;
+}
+/*Iframe itself*/
+.roomtour iframe {
+width: 100%;
+ /*I have fullwidth iframe. You can use width in pixels too.*/
+display: block;
+position: relative;
+pointer-events: none;
+ /*Disable actions with mouse completely*/
+}
+.roomtour iframe.clicked {
+pointer-events: auto;
+ /*Enable mouse actions again*/
+}
+</style>
+<script>jQuery('.roomtour')
+ //you can add your own selector
+.click(function(){
+ //apply function when click on iframe
+jQuery(this).find('iframe').addClass('clicked')})
+ //apply class clicked
+.mouseleave(function(){
+ //apply when mouse leave the iframe
+jQuery(this).find('iframe').removeClass('clicked')}); //remove class clicked</script>
