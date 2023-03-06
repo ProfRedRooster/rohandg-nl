@@ -1,4 +1,32 @@
-εργον 5
+
+<script>
+document.getElementById('copy').addEventListener('copy', function(e) { e.clipboardData.setData('text/plain', 'Niet kopieren); e.preventDefault(); });
+ </script>
+ <div id="passw">
+            <div>
+                (THE PASSWORD IS PASSWORD) <br />
+                Enter the password to proceed:
+            </div>
+            <div>
+            
+                <input type="password" id="password" onkeydown="if (event.keyCode == 13) document.getElementById('button').click()" /> <!-- IMPORTANT! this part is so if you click enter, it works. -->
+                </div>
+            
+
+            <div>
+                <br/>
+                <input id="button" type="button" value="Login" onclick="if (document.getElementById('password').value == 'Blokhuisje') { 
+document.getElementById('table').classList.toggle('show');   document.getElementById('passw').style.display='none'; } 
+else {  alert('Invalid Password!'); password.setSelectionRange(0, password.value.length);   } " />
+            </div>
+<!-- it will autoselect wrong input if wrong -->
+    <br /><br /><br />
+        </div>
+
+   
+        
+        <p id="HIDDENDIV" >
+        εργον 5
 Πως,  hoe
 Το ἐργον,  werk, taak, daad
 Πραττω, doen, handelen
@@ -80,6 +108,17 @@ Rijtje εἰμί
 Τα ὀπλα, (mv) wapens
 
 
-<script>
-document.getElementById('copy').addEventListener('copy', function(e) { e.clipboardData.setData('text/plain', 'Niet kopieren); e.preventDefault(); });
- </script>
+        hidden s</p>
+<style> #HIDDENDIV {
+    display: none;
+}
+
+#table td {
+    padding: 1em;
+    border: 1px solid black;
+}
+
+
+#table.show tr > *:nth-child(2) {
+    display: block;</style>
+
