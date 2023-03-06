@@ -6,8 +6,19 @@
 <script>
 document.getElementById('copy').addEventListener('copy', function(e) { e.clipboardData.setData('text/plain', 'Niet kopieren); e.preventDefault(); });
  </script>
+  <style>
+      .unselectable {
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #cc0000;
+      }
+    </style>
 </head>
 <body>
+ <div class="unselectable">
 <table cellpadding="5" cellspacing="1" border="1">
 <tr><td>εργον 5</td></tr>
 <tr><td>Πως,  hoe</td></tr>
@@ -91,5 +102,6 @@ document.getElementById('copy').addEventListener('copy', function(e) { e.clipboa
 <tr><td>Τα ὀπλα, (mv) wapens</td></tr>
 <tr><td></td></tr>
 </table>
+  </div>
 </body>
 </html>
