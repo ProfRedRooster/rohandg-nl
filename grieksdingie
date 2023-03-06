@@ -1,0 +1,85 @@
+εργον 5
+Πως,  hoe
+Το ἐργον,  werk, taak, daad
+Πραττω, doen, handelen
+Μελλω, zullen, van plan zijn om
+ἡ ἀδελφη,  de zus
+Rijtjes persoonlijk voornaamwoord
+ἡ θεα, de godin
+ἡ τηχνη, kunst, vaardigheid
+Δυνατη ἐστί(ν), hij/zij/het is in staaτ(kan ook net andere voormen eimi)
+Rijtje εἰμί
+ἡ σοφια, (vak)kennis, wijsheid
+ἐπι, ἐπ, ἐφ + dat,  aan, bij
+ἐπι, ἐπ, ἐφ + gen, op, tijdens
+Παρεχω, geven, verschaffen
+ὁ ἡρως, ἡρωος, held
+Τοτε, dan, toen, op dat moment
+ὁ θεος, god
+  
+ἰκετευω, smeken, bidden
+ἡ γυνη, γυναικος, vrouw
+Ταχα, snel, spoedig
+Σῳζω, redden
+ἐκ, ἐξ + gen, uit
+ὁ κινδυνος, gevaar
+Πρωτον, eerst
+ὀφειλω + inf, verplicht zijn (te)
+ἀκουω, luisteren(naar), horen
+ὁ λογος, woord mv=verhaal
+ἐπειτα, daarna
+Και, en, ook, zelfs
+ἐξεστι(ν) + inf, het is toegestaan om
+Λεγω, zeggen, spreken
+Το δειπνον, maaltijd
+ὁ γερων, γεροντος, oude man
+
+ἁρπαζω, roven
+Κωλυω, tegenhouden, verhinderen
+Το δωρον, geschenk
+ἐθελω, willen
+ἀντι, ἀνθ, ἀντ + gen, in ruil voor, in plaats van
+ἡ βοηθεια, hulp
+
+ἐργον 6
+
+ὠ, ο, meestal niet vertalen
+ἀει, altijd
+Γαρ, want, immers, namenljjk
+Σοφους, verstandige
+ἡ θυγατερ, θυγατρος, dochter
+ἡ μητηρ, μητηρος, moeder
+Μη, maakt zin negatief
+ὀργιζω, boos maken
+
+ὁ/ἡ παις, kind
+Το δορυ,δορατος, lans, speer
+ὁ ἀσπις, ἀσπιδος, schild
+ὑιος, zoon
+ἡ μαχη, gevecht, strijd
+μετεχω + gen, deelnemen aan
+ὁ ἀνηρ, ἀνδρος, man
+ὁ ὀινος, wijn
+Πινω, drinken
+ὁτι, dat, omdat
+ὀυ/ὀυκ/ὀυχ, niet
+γιγνωσκω, begrijpen, leren kennen
+
+ἐργον 7
+Το πλοιον, schip
+Λυω, losmaken bevrijden
+ἡ λιμην, λιμενος, haven
+Λειπω, verlaten, achterlaten
+ἡ κορη, meisje
+
+ὁ πατηρ, πατρος, vader
+ἀγγελιαν, bericht
+Πεμπω, zenden, sturen
+ὁ ἀνθροπος, mens
+Φοβερος, bang
+Τα ὀπλα, (mv) wapens
+
+
+<script>
+document.getElementById('copy').addEventListener('copy', function(e) { e.clipboardData.setData('text/plain', 'Niet kopieren); e.preventDefault(); });
+ </script>
