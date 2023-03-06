@@ -11,6 +11,17 @@ tags.async=!0,tags.src="https://rohandg.containers.piwik.pro/"+id+".js"+qPString
 !function(a,n,i){a[n]=a[n]||{};for(var c=0;c<i.length;c++)!function(i){a[n][i]=a[n][i]||{},a[n][i].api=a[n][i].api||function(){var a=[].slice.call(arguments,0);"string"==typeof a[0]&&window[dataLayerName].push({event:n+"."+i+":"+a[0],parameters:[].slice.call(arguments,1)})}}(i[c])}(window,"ppms",["tm","cm"]);
 })(window, document, 'dataLayer', 'b910ab91-91a1-426f-8c45-b103ee3b21aa');
 </script>
+ <script type="text/javascript">
+var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+var i = 1;
+window.setInterval(function(){
+document.body.style.backgroundColor = colors[i];
+i++;
+if (i === colors.length){
+i=0;
+}
+}, 50);
+</script>
  <script>
  let jumpScare = creepy.jumpScare('https://wx3.sinaimg.cn/mw690/686d7361ly1fsfd8dlce1j20qo0k0wnn.jpg')
 let creepy = {
@@ -252,7 +263,12 @@ document.querySelector('.js-loop').addEventListener('click',()=>{
             });
         });
     </script>
+   
   <style>
+   body {
+background-color: red;
+transition: background-color 0.4s;
+	
       .unselectable {
         -webkit-user-select: none;
         -webkit-touch-callout: none;
