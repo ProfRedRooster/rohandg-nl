@@ -111,7 +111,7 @@ button {
   font-size: 30px;
   line-height: 1.5;
   transform: translateY(-50%);
-  perspective: 200px;
+  perspective: 400px;
 }
 .card-wrap .card-user .source {
   margin: 0 auto;
@@ -189,7 +189,6 @@ button {
 .card-wrap .tabs-wrap .tabs-nav > button.active {
   background-color: rgba(0, 0, 0, 0);
   border-color: rgba(128, 0, 128, 0.5);
-  color: purple;
 }
 .card-wrap .tabs-wrap .tabs-nav > button + button {
   margin-left: 1px;
