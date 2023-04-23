@@ -67,6 +67,7 @@ body {
   text-decoration: none;
   box-sizing: border-box;
   transition: color 300ms ease-out, background 300ms ease-out, border 300ms ease-out, trandform 300ms ease-out, opacity 300ms ease-out;
+  text-align: center;
 }
 
 /**
