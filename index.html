@@ -1,581 +1,172 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-	
-  <title>Rohandg.nl</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://github.com/facilismusic/facilismusic.github.io/blob/master/assets/css/main.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
-  <style>
- @media (max-width:629px) {
-  img#optionalstuff {
-    display: none;
-  }
-}
- 
-        body {
-    position: relative; 
-  }
-  body {
-    position: relative; 
-  }
-  #section0 {padding-top:50px;height:200px;color: #fff; background-color: rebeccapurple;}
-  #section1 {padding-top:50px;height:700px;color: #fff; background-color: white;}
-  #section2 {padding-top:50px;height:500px;color: #fff; background-color: paleturquoise;}
 
-  #section4 {padding-top:40px;height:500px;color: #fff; background-color: hotpink;}
-  #section45 {padding-top:40px;height:100%;color: #fff; background-color: paleturquoise;}
-  #section5 {padding-top:30px;height:100px;color: #fff; background-color: lightgray;} 
-	  /*500* Vars 
- */
-$colorPrimary: purple; // try a different color!
-$padSpace: 1em; 
-$maxWidth: 100%; 
-$heroHeight: ; 
-$borderRadius: 0px; 
-$fxSpeed: 300ms; 
-$bgColor: #f0f0f0; 
-$fontColor: desaturate( darken( $colorPrimary, 35% ), 50% );
-$fontFamily: 'Merriweather Sans', Arial, sans-serif; 
-$fontSize: 15px; 
-$shadowSmall: 0 1px 3px rgba( #000, 0.3 );
-$shadowBig: 0 2px 18px rgba( #000, 0.5 );
-
-/**
- * Reset 
- */
-*, *:before, *:after {
- outline: 0; 
- margin: 0; 
- padding: 0; 
- border: 0; 
- text-decoration: none; 
- box-sizing: border-box; 
- transition: 
-  color $fxSpeed ease-out, 
-  background $fxSpeed ease-out, 
-  border $fxSpeed ease-out, 
-  trandform $fxSpeed ease-out, 
-  opacity $fxSpeed ease-out; 
-}
-
-/**
- * Doc 
- */
-
-/**
- * Form elms 
- */
-input, textarea, select, options, button {
- font-family: inherit; 
- font-size: inherit; 
- line-height: inherit; 
- font-weight: normal;
- background: none;
-}
-
-/**
- * Card 
- */
-.card-wrap {
- overflow: hidden; 
- margin: 0 auto; 
- max-width: $maxWidth; 
- background-color: $bgColor; 
- border-radius: $borderRadius; 
- box-shadow: $shadowBig;
- 
- // user info 
- .card-user {
-  position: relative; 
-  
-  // user hero bg 
-  .card-user-split {
-   max-width: 70vw;
-	padding: 30px;
-	margin: 0 auto;
-	position: relative;
-	top: 50%;
-	font-size: 30px;
-	line-height: 1.5;
-	transform: translateY(-50%);
-	perspective: 400px;
-}
-
-.source {
-	color: purple;
-	margin: 0 auto;
-}
-
-  
-  // user details row 
-  .card-user-row {
-   display: flex; 
-   flex-direction: flex-row; 
-   align-items: center; 
-   justify-content: stretch; 
-   position: relative; 
-   padding: $padSpace;
-   padding-top: calc( #{$heroHeight} - 3em );
-   margin-bottom: $padSpace;
-
-   // user avatar image 
-   .card-user-avatar {
-    margin-right: $padSpace;
-    & > img {
-     display: block; 
-     width: 6em;
-     height: 6em;
-     border: 3px solid $bgColor; 
-     border-radius: 100px; 
-     box-shadow: $shadowBig;
-    }
-   }
-
-   // user name and info 
-   .card-user-details {
-    flex: 1;
-    margin-right: $padSpace;
-    margin-top: .6em;
-    line-height: normal;
-    text-wrap: nowrap; 
-    height: 85px; 
-    
-    .card-user-name {
-     font-size: 200%;
-     letter-spacing: -1px;
-     line-height: 1em;
-     color: $bgColor;
-     text-shadow: $shadowBig;
-    }
-    .card-user-info {
-     line-height: 1em;
-     padding-top: $padSpace;
-     color: desaturate( darken( $colorPrimary, 10% ), 20% );
-    }
-   }
-  
-   // user cta link 
-   .card-user-cta {
-    & > a {
-     display: block; 
-     cursor: pointer; 
-     color: $bgColor;
-     font-weight: normal;
-     padding: ( $padSpace * .8 ) $padSpace;
-     border-radius: 100px; 
-     box-shadow: $shadowBig;
-     text-shadow: $shadowSmall;
-     background-color: desaturate( lighten( $colorPrimary, 5% ), 20% );
-
-     &:hover {
-      background-color: desaturate( lighten( $colorPrimary, 0% ), 20% );
-     }
-    }
-   }
-  }
- }
-
- // tabs section 
- .tabs-wrap {
-  position: relative;
-  
-  .tabs-nav {
-   display: flex; 
-   flex-direction: flex-row; 
-   align-items: center; 
-   justify-content: stretch; 
-   position: relative; 
-   overflow: hidden; 
-   
-   // tab button
-   & > button {
-    flex: 1;
-    display: block; 
-    cursor: pointer; 
-    text-align: center; 
-    padding: ( $padSpace * .8 ) 0;
-    background-color: rgba( #000, 0.09 ); 
-    border-top: 2px solid rgba( $colorPrimary, 0 ); 
-    font-weight: bold;
-    
-    &:hover {
-     background-color: rgba( #000, 0.05 ); 
-    }
-    &.active {
-     background-color: rgba( #000, 0 ); 
-     border-color: rgba( $colorPrimary, 0.5 ); 
-     color: $colorPrimary;
-    }
-    & + button {
-     margin-left: 1px;
-    }
-   }
-  }
-  
-  // tab content 
-  .tabs-info {
-   min-height: 100px;
-   padding-top: $padSpace;
-   
-   .tabs-info-row {
-    display: flex; 
-    flex-direction: flex-row; 
-    align-items: center; 
-    justify-content: stretch; 
-    margin-bottom: $padSpace;
-    padding: 0 $padSpace;
-    
-    .tabs-info-qr {
-     margin-right: $padSpace;
-     & > img {
-      display: block; 
-      border-radius: 20%; 
-     }
-    }
-    .tabs-info-title {
-     font-size: 200%;
-     margin-bottom: 10px;
-    }
-   }
-   
-   .tabs-info-input {
-    display: flex; 
-    flex-direction: flex-row; 
-    align-items: center; 
-    justify-content: stretch; 
-    background-color: #fff;
-    padding: ( $padSpace * .75 ) $padSpace;
-    box-shadow: inset 0 0 3px rgba( 0, 0, 0, 0.4 );
-    
-    & > span {
-     margin-right: $padSpace;
-     font-weight: bold; 
-    }
-    & > input {
-     flex: 1; 
-     margin-right: $padSpace;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     white-space: nowrap;
-     font-weight: bold; 
-     color: $colorPrimary; 
-    }
-    & > button {
-     cursor: pointer; 
-     font-weight: bold; 
-    }
-   }
-   
-   .tabs-info-stats {
-    display: flex; 
-    flex-direction: flex-row; 
-    align-items: center; 
-    justify-content: space-between; 
-    padding: $padSpace; 
-    
-    .txt-label {
-     font-size: 80%;
-     text-transform: uppercase;
-     opacity: 0.5;
-    }
-   }
-   
-  }
- }
-
-
-}
-
-  </style>
+ <title>Rohandg.nl</title>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="https://github.com/facilismusic/facilismusic.github.io/blob/master/assets/css/main.css">
+<link rel="stylesheet" href="main.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+ <script src="main.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
 </head>
+
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
+ <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>     
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-      </button>
-    </div>
-    <div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Rohandg.nl<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="https://rohandg.nl/" style="color:gainsboro;">Rohandg.nl</a></li>
-	      <li><a href="https://spqr.rohandg.nl">SPQR.rohandg.nl</a></li>
-              <li><a href="https://incendere.nl/">Incendere.nl</a></li>
-	      
-            </ul>
-          </li>
-          <li><a href="#section0">Home</a></li>
-          <li><a href="#section1">Public projects</a></li>
-          <li><a href="#section2">Private projects</a></li>
-          <li><a href="#section4">Contact</a></li>
-          <li><a href="https://www.mostsecure.rohandg.nl">Login</a></i>
-	
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>    
+   <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
+     <span class="icon-bar"></span>
 
-<div id="section0" class="container-fluid">
-    
-      <h1>Rohan de Graaf</h1>
-    <p></p>
-</div>    
-    
-<div id="section1" class="container-fluid">
-    
-    <h1 style="color:darkblue">Public projects</h1>
-    <img id="optionalstuff" src="https://ghchart.rshah.org/409ba5/profredrooster" alt="Profredrooster Github Chart" />
-    <ul style="color:darkblue"><li><a href="http://app.rohandg.nl:8880/api/v1/t/3ec1a5d3d7d85d2e29f4baedbdd4e7ba83cf1f4e/d60a456a/fit_2048" target="_blank" rel="noopener noreferrer" style="color:darkblue">DIY Hydrogen generator</a></li></ul>
-    <ul style="color:darkblue"><li><a href="https://github.com/ProfRedRooster/djogbot" target="_blank" rel="noopener noreferrer" style="color:darkblue">Djog bot</a></li></ul>
-    <ul style="color:darkblue"><li><a href="https://github.com/ProfRedRooster/screensaver" target="_blank" rel="noopener noreferrer" style="color:darkblue"> A processing screensaver</a></li></ul>
-    <ul style="color:darkblue"><li><a href="https://github.com/richelbilderbeek/djog_picos_2018" target="_blank" rel="noopener noreferrer" style="color:darkblue">A "vuur jongen, water meisje" attempt on a game </a></li></ul>
-    <ul style="color:darkblue"><li><a href="https://github.com/ProfRedRooster/QuintinoM" target="_blank" rel="noopener noreferrer" style="color:darkblue">A (i think) virus thingie i made a long time ago</a></li></ul>
-    <ul style="color:darkblue"><li><a href="https://github.com/djog/Team-Universe" target="_blank" rel="noopener noreferrer" style="color:darkblue">A webbrowser</a></li></ul>
-    <ul style="color:darkblue"><li><a href="https://crypto.rohandg.nl" target="_blank" rel="noopener noreferrer" style="color:darkblue">CryptoMeter NL, A crypto performance meter</a></li></ul>
-    <ul style="color:darkblue"><li><a href="https://rohandg.nl/Nederlands-gif.html" target="_blank" rel="noopener noreferrer" style="color:darkblue">A gif i made for school</a></li></ul>
-    <ul style="color:darkblue"><li><a href="https://latijn.rohandg.nl/" target="_blank" rel="noopener noreferrer" style="color:darkblue">A word searcher for my latin book SPQR</a></li></ul>
-    <ul style="color:darkblue"><li><a href="https://grieks.rohandg.nl/" target="_blank" rel="noopener noreferrer" style="color:darkblue">A Website (in progress) about a Ancient Greek history</a></li></ul>
-    
-    
-    
-</div>
-<div id="section2" class="container-fluid">
-    
-      <h1>Private projects</h1>
-
- <ul><li><a href="https://short.rohandg.nl/" target="_blank" rel="noopener noreferrer">URL shortner</a></li></ul> 
- 
- <ul><li><a href="http://media.rohandg.nl" target="_blank" rel="noopener noreferrer">PhotoPrism server</a></li></ul>
-  
-
-    
-     </div>
-  
-
-    
-<div id="section4" class="container-fluid">
-<h1>Contact</h1>
-<h3>Email</h3>
-<p>You can mail me at <a href="mailto:rohan@rohandg.nl">Rohan@rohandg.nl</a> or you can contact me at any of the socials down below.</p>
-    
-						
-    
-      <h3>Socials</h3>
-        <ul class="icons">
-            <li><a href="https://soundcloud.com/rohan-de-graaf"><span class="label">Soundcloud</span></a></li>
-            <li><a href="https://open.spotify.com/artist/5DpArli4B3HECVpr2ZtmCp?si=sqozg1z8QJmeCG972FGvCQ"><span class="label">Spotify</span></a></li>
-            <li><a href="https://github.com/profredrooster/"><span class="label">Github</span></a></li>
-            <li><a href="https://www.instagram.com/facilis1/"><span class="label">Instagram</span></a></li>
-            <li><a href="https://www.twitter.com/onefacilis1/"><span class="label">Twitter</span></a></li>
-            <li><a href="https://www.linkedin.com/in/rohan-de-graaf-a260b6230/"><span class="label">Linkedin</span></a></li>
-        </ul>
-
-	
-
-</div>
-<div id="section45" class="container-fluid">
-    	 <div class="card-wrap" id="card">
-
- 
- <!-- tabs -->
- <main style="color:darkblue" class="tabs-wrap">
-  <!-- tab buttons -->
-  <nav class="tabs-nav">
-   <button v-for="w in walletsList" :key="w.symbol" :class="{ 'active': w.active }" @click="selectWallet( w.symbol )">{{ w.symbol }}</button>
-  </nav>
-  <!-- tab content -->
-  <section class="tabs-info">
-   <!-- qr image -->
-   <div class="tabs-info-row">
-    <div class="tabs-info-qr">
-     <img :src="getQrImage()" :alt="wallet.name" />
-    </div>
-    <div class="tabs-info-details">
-     <div class="tabs-info-title">Donate {{ wallet.name }}</div>
-     <div class="tabs-info-warn">Send only {{ wallet.name }} ({{ wallet.symbol }}) to this deposit address. Sending any other coin or token to this address may result in the loss of your donation, Thanks!</div>
-    </div>
-   </div>
-   <!-- address input -->
-   <div class="tabs-info-input">
-    <span>Address</span>
-    <input type="text" :value="wallet.address" />
-    <button type="button" @click="copyText( wallet.address )">
-     <span v-if="wallet.copied">✔ Copied</span>
-     <span v-else>✚ Copy</span>
     </button>
    </div>
-   <!-- coin stats -->
-  
-  </section>
-   
-</div>
+   <div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+     <ul class="nav navbar-nav">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Rohandg.nl<span class="caret"></span></a>
+       <ul class="dropdown-menu">
+        <li><a href="https://rohandg.nl/" style="color:gainsboro;">Rohandg.nl</a></li>
+        <li><a href="https://spqr.rohandg.nl">SPQR.rohandg.nl</a></li>
+        <li><a href="https://incendere.nl/">Incendere.nl</a></li>
 
-       <div id="section5" class="container-fluid">
-    <p style="color:darkblue">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rohan de Graaf All Rights Reserved</p>
-    <p style="color:darkblue">Made using Bootstrap.js, Bootstrap.min.cs and jQuery.js</p>
-   
-</div>    
-<script>// user details 
-const userInfo = {
- avatar: '', 
- split: '', 
- website: '', 
- name: '', 
- info: '', 
-}; 
+       </ul>
+      </li>
+      <li><a href="#section0">Home</a></li>
+      <li><a href="#section1">Public projects</a></li>
+      <li><a href="#section2">Private projects</a></li>
+      <li><a href="#section4">Contact</a></li>
+      <li><a href="#section45">Donate</a></li>
+      <li><a href="https://www.mostsecure.rohandg.nl">Login</a></i>
 
-// crypto wallets 
-const cryptoWallets = [
- {
-  symbol: 'BTC', 
-  name: 'Bitcoin',
-  address: 'bc1qglh6paejzdmu2w920mak40kvtesufcvqzu5mz0', 
-   qr: 'bitcoin:bc1qglh6paejzdmu2w920mak40kvtesufcvqzu5mz0',
- }, 
- {
-  symbol: 'XHV', 
-  name: 'Haven',
-  address: 'hvxy4jiG4bzLbegaQPVvJGcQjHvs6VJhSdqMtGxxgznz4mPvHWumXuKLGU3K7dXzLzH8UoMojq9kffi7y7M1fNsq1oiBahRj9V', 
-   qr: 'haven:hvxy4jiG4bzLbegaQPVvJGcQjHvs6VJhSdqMtGxxgznz4mPvHWumXuKLGU3K7dXzLzH8UoMojq9kffi7y7M1fNsq1oiBahRj9V',
- }, 
- {
-  symbol: 'LTC', 
-  name: 'Litecoin',
-  address: 'ltc1qvjyazjly2944rmalrtvpvl2zncfd7z8uher3mh',
-  qr: 'Litecoin:ltc1qvjyazjly2944rmalrtvpvl2zncfd7z8uher3mh',
- }, 
- {
-  symbol: 'XMR', 
-  name: 'Monero',
-  address: '49mSvMXTjVRX1CaRpbWckCWC8LA8pYTwwRfwQQWepvHy5iLVbGJXkcxVUds4KGEzK91Sx4z3RDkG9grdazUYt4MDRQXCnSd', 
-  qr: 'monero:49mSvMXTjVRX1CaRpbWckCWC8LA8pYTwwRfwQQWepvHy5iLVbGJXkcxVUds4KGEzK91Sx4z3RDkG9grdazUYt4MDRQXCnSd',
- }, 
-];
+     </ul>
+    </div>
+   </div>
+  </div>
+ </nav>
 
-// number format filter 
-Vue.filter( 'toMoney', ( num, decimals ) => {
- let o = { style: 'decimal', minimumFractionDigits: decimals, maximumFractionDigits: decimals };
- return new Intl.NumberFormat( 'en-US', o ).format( num );
-});
+ <div id="section0" class="container-fluid">
 
-// vue instance 
-new Vue({
- el: '#card', 
- 
- // app data 
- data: {
-  userInfo, 
-  cryptoWallets,
-  tab: 'XMR', 
-  wallet: {}, 
-  statsCache: {}, 
-  stats: {}, 
- }, 
- 
- // computed methods 
- computed: {
-  
-  // compute list wallets for tabs 
-  walletsList() {
-   return this.cryptoWallets.map( w => {
-    w.active = ( w.symbol === this.tab ); 
-    return w;
-   }); 
-  }, 
- }, 
- 
- // custom methods 
- methods: {
-  
-  // select active tab wallet 
-  selectWallet( symbol ) {
-   let wallet = this.cryptoWallets.filter( w => w.symbol === symbol ).shift(); 
-   if ( !wallet ) return; 
-   wallet.copied = 0; 
-   this.wallet = wallet;  
-   this.tab = symbol; 
-   this.fetchStats( symbol ); 
-  },  
-  
-  // copy text to clipboard
-  copyText( txt ) {
-   txt = String( txt || '' ).trim();
-   if ( !txt ) return;
-   let input = document.createElement( 'input' );
-   document.body.appendChild( input );
-   input.value = txt;
-   input.select();
-   document.execCommand( 'Copy' );
-   document.body.removeChild( input ); 
-   this.wallet = Object.assign( {}, this.wallet, { copied: 1 } ); 
-  },
-  
-  // get qr image url for selected wallet 
-  getQrImage() {
-   const w = 180; 
-   const h = 180; 
-   const a = this.wallet.qr; 
-   return `https://chart.googleapis.com/chart?chs=${w}x${h}&cht=qr&choe=UTF-8&chl=${a}`;
-  }, 
-  
-  // set coin stats 
-  setStats( symbol, data ) {
-   let price  = 0;
-   let cap    = 0;
-   let supply = 0;
-   let time   = Date.now(); 
-   let stats  = Object.assign( { price, cap, supply, time }, data ); 
-   this.statsCache[ symbol ] = stats; 
-   this.stats = stats; 
-  }, 
-  
-  // fetch market stats for a symbol 
-  fetchStats( symbol ) {
-   let stats = this.statsCache[ symbol ] || null; 
-   let price = stats ? stats.price : 0; 
-   let secs  = stats ? ( ( Date.now() - stats.time ) / 1000 ) : 0; 
-   
-   // use values from cache 
-   if ( price && secs < 300 ) {
-    return this.setStats( symbol, stats );
-   }
-   // reset and fetch new values from api 
-   this.setStats( symbol ); 
-   const xhr = new XMLHttpRequest();
-   xhr.open( 'GET', 'https://coincap.io/page/'+ symbol, true );
-   xhr.setRequestHeader( 'X-Requested-With', 'XMLHttpRequest' );
-   xhr.responseType = 'json';
-   xhr.addEventListener( 'load', e => { 
-    if ( !xhr.response || !xhr.response.id ) return;  
-    let price  = parseFloat( xhr.response.price ) || 0; 
-    let cap    = parseFloat( xhr.response.market_cap ) || 0; 
-    let supply = parseFloat( xhr.response.supply ) || 0; 
-    this.setStats( symbol, { price, cap, supply } ); 
-   });
-   xhr.send();
-  }, 
- }, 
- 
- // when component mounts 
- mounted() {
-  this.selectWallet( this.tab ); 
- }, 
-});</script>
+  <h1>Rohan de Graaf</h1>
+  <p></p>
+ </div>
+
+ <div id="section1" class="container-fluid">
+
+  <h1 style="color:darkblue">Public projects</h1>
+  <img id="optionalstuff" src="https://ghchart.rshah.org/409ba5/profredrooster" alt="Profredrooster Github Chart" />
+  <ul style="color:darkblue">
+   <li><a href="http://app.rohandg.nl:8880/api/v1/t/3ec1a5d3d7d85d2e29f4baedbdd4e7ba83cf1f4e/d60a456a/fit_2048" target="_blank" rel="noopener noreferrer" style="color:darkblue">DIY Hydrogen generator</a></li>
+  </ul>
+  <ul style="color:darkblue">
+   <li><a href="https://github.com/ProfRedRooster/djogbot" target="_blank" rel="noopener noreferrer" style="color:darkblue">Djog bot</a></li>
+  </ul>
+  <ul style="color:darkblue">
+   <li><a href="https://github.com/ProfRedRooster/screensaver" target="_blank" rel="noopener noreferrer" style="color:darkblue"> A processing screensaver</a></li>
+  </ul>
+  <ul style="color:darkblue">
+   <li><a href="https://github.com/richelbilderbeek/djog_picos_2018" target="_blank" rel="noopener noreferrer" style="color:darkblue">A "vuur jongen, water meisje" attempt on a game </a></li>
+  </ul>
+  <ul style="color:darkblue">
+   <li><a href="https://github.com/ProfRedRooster/QuintinoM" target="_blank" rel="noopener noreferrer" style="color:darkblue">A (i think) virus thingie i made a long time ago</a></li>
+  </ul>
+  <ul style="color:darkblue">
+   <li><a href="https://github.com/djog/Team-Universe" target="_blank" rel="noopener noreferrer" style="color:darkblue">A webbrowser</a></li>
+  </ul>
+  <ul style="color:darkblue">
+   <li><a href="https://crypto.rohandg.nl" target="_blank" rel="noopener noreferrer" style="color:darkblue">CryptoMeter NL, A crypto performance meter</a></li>
+  </ul>
+  <ul style="color:darkblue">
+   <li><a href="https://rohandg.nl/Nederlands-gif.html" target="_blank" rel="noopener noreferrer" style="color:darkblue">A gif i made for school</a></li>
+  </ul>
+  <ul style="color:darkblue">
+   <li><a href="https://latijn.rohandg.nl/" target="_blank" rel="noopener noreferrer" style="color:darkblue">A word searcher for my latin book SPQR</a></li>
+  </ul>
+  <ul style="color:darkblue">
+   <li><a href="https://grieks.rohandg.nl/" target="_blank" rel="noopener noreferrer" style="color:darkblue">A Website (in progress) about a Ancient Greek history</a></li>
+  </ul>
+
+ </div>
+ <div id="section2" class="container-fluid">
+
+  <h1>Private projects</h1>
+
+  <ul>
+   <li><a href="https://short.rohandg.nl/" target="_blank" rel="noopener noreferrer">URL shortner</a></li>
+  </ul>
+
+  <ul>
+   <li><a href="http://media.rohandg.nl" target="_blank" rel="noopener noreferrer">PhotoPrism server</a></li>
+  </ul>
+
+ </div>
+
+ <div id="section4" class="container-fluid">
+  <h1>Contact</h1>
+  <h3>Email</h3>
+  <p>You can mail me at <a href="mailto:rohan@rohandg.nl">Rohan@rohandg.nl</a> or you can contact me at any of the socials down below.</p>
+
+  <h3>Socials</h3>
+  <ul class="icons">
+   <li><a href="https://soundcloud.com/rohan-de-graaf"><span class="label">Soundcloud</span></a></li>
+   <li><a href="https://open.spotify.com/artist/5DpArli4B3HECVpr2ZtmCp?si=sqozg1z8QJmeCG972FGvCQ"><span class="label">Spotify</span></a></li>
+   <li><a href="https://github.com/profredrooster/"><span class="label">Github</span></a></li>
+   <li><a href="https://www.instagram.com/facilis1/"><span class="label">Instagram</span></a></li>
+   <li><a href="https://www.twitter.com/onefacilis1/"><span class="label">Twitter</span></a></li>
+   <li><a href="https://www.linkedin.com/in/rohan-de-graaf-a260b6230/"><span class="label">Linkedin</span></a></li>
+  </ul>
+
+ </div>
+ <div id="section45" class="container-fluid">
+  <div class="card-wrap" id="card">
+
+   <!-- tabs -->
+   <main style="color:darkblue" class="tabs-wrap">
+    <!-- tab buttons -->
+    <nav class="tabs-nav">
+     <button v-for="w in walletsList" :key="w.symbol" :class="{ 'active': w.active }" @click="selectWallet( w.symbol )">{{ w.symbol }}</button>
+    </nav>
+    <!-- tab content -->
+    <section class="tabs-info">
+     <!-- qr image -->
+     <div class="tabs-info-row">
+      <div class="tabs-info-qr">
+       <img :src="getQrImage()" :alt="wallet.name" />
+      </div>
+      <div class="tabs-info-details">
+       <div class="tabs-info-title">Donate {{ wallet.name }}</div>
+       <div class="tabs-info-warn">Send only {{ wallet.name }} ({{ wallet.symbol }}) to this deposit address. Sending any other coin or token to this address may result in the loss of your donation, Thanks!</div>
+      </div>
+     </div>
+     <!-- address input -->
+     <div class="tabs-info-input">
+      <span>Address</span>
+      <input type="text" :value="wallet.address" />
+      <button type="button" @click="copyText( wallet.address )">
+       <span v-if="wallet.copied">✔ Copied</span>
+       <span v-else>✚ Copy</span>
+      </button>
+     </div>
+     <!-- coin stats -->
+
+    </section>
+
+  </div>
+
+  <div id="section5" class="container-fluid">
+   <p style="color:darkblue">Copyright &copy; <script>
+     document.write(new Date().getFullYear())
+    </script> Rohan de Graaf All Rights Reserved</p>
+   <p style="color:darkblue">Made using Bootstrap.js, Bootstrap.min.cs and jQuery.js</p>
+
+  </div>
+
 </body>
-</html>
 
+</html>
