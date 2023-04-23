@@ -41,7 +41,7 @@ body {
 
 #section45 {
   padding-top: 40px;
-  height: 100%;
+  height: 100px;
   color: #fff;
   background-color: paleturquoise;
 }
@@ -246,7 +246,6 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
   font-weight: bold;
-  color: purple;
 }
 .card-wrap .tabs-wrap .tabs-info .tabs-info-input > button {
   cursor: pointer;
