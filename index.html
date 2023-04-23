@@ -126,7 +126,6 @@
      <button v-for="w in walletsList" :key="w.symbol" :class="{ 'active': w.active }" @click="selectWallet( w.symbol )">{{ w.symbol }}</button>
     </nav>
     <!-- tab content -->
-    <section class="tabs-info">
      <!-- qr image -->
      <div class="tabs-info-row">
       <div class="tabs-info-qr">
@@ -146,9 +145,7 @@
        <span v-else>✚ Copy</span>
       </button>
      </div>
-     <!-- coin stats -->
 
-    </section>
 
   </div>
 
