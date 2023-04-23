@@ -98,6 +98,7 @@ button {
   background-color: #f0f0f0;
   border-radius: 0px;
   box-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 .card-wrap .card-user {
   position: relative;
@@ -124,6 +125,7 @@ button {
   position: relative;
   padding: 1em;
   margin-bottom: 1em;
+    text-align: center;
 }
 
 
@@ -133,11 +135,13 @@ button {
   line-height: 1em;
   color: #f0f0f0;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 .card-wrap .card-user .card-user-row .card-user-details .card-user-info {
   line-height: 1em;
   padding-top: 1em;
   color: #450845;
+    text-align: center;
 }
 .card-wrap .card-user .card-user-row .card-user-cta > a {
   display: block;
@@ -148,6 +152,7 @@ button {
   box-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   background-color: #8a0f8a;
+    text-align: center;
 }
 .card-wrap .card-user .card-user-row .card-user-cta > a:hover {
   background-color: #730d73;
@@ -162,6 +167,7 @@ button {
   justify-content: stretch;
   position: relative;
   overflow: hidden;
+    text-align: center;
 }
 .card-wrap .tabs-wrap .tabs-nav > button {
   flex: 1;
@@ -194,9 +200,11 @@ button {
   justify-content: stretch;
   margin-bottom: 1em;
   padding: 0 1em;
+    text-align: center;
 }
 .card-wrap .tabs-wrap .tabs-info .tabs-info-row .tabs-info-qr {
   margin-right: 1em;
+    text-align: center;
 }
 .card-wrap .tabs-wrap .tabs-info .tabs-info-row .tabs-info-qr > img {
   display: block;
@@ -206,6 +214,7 @@ button {
   font-size: 200%;
   margin-bottom: 10px;
   width: 300px;
+    text-align: center;
 }
 .card-wrap .tabs-wrap .tabs-info .tabs-info-input {
   display: flex;
