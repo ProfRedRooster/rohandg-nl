@@ -104,7 +104,7 @@ button {
 }
 .card-wrap .card-user .card-user-split {
   max-width: 70vw;
-  padding: 30px;
+  padding: 0px;
   margin: 0 auto;
   position: relative;
   top: 50%;
@@ -125,17 +125,7 @@ button {
   padding: 1em;
   margin-bottom: 1em;
 }
-.card-wrap .card-user .card-user-row .card-user-avatar {
-  margin-right: 1em;
-}
-.card-wrap .card-user .card-user-row .card-user-avatar > img {
-  display: block;
-  width: 6em;
-  height: 6em;
-  border: 3px solid #f0f0f0;
 
-  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.5);
-}
 
 .card-wrap .card-user .card-user-row .card-user-details .card-user-name {
   font-size: 200%;
@@ -215,6 +205,7 @@ button {
 .card-wrap .tabs-wrap .tabs-info .tabs-info-row .tabs-info-title {
   font-size: 200%;
   margin-bottom: 10px;
+  width: 200px;
 }
 .card-wrap .tabs-wrap .tabs-info .tabs-info-input {
   display: flex;
