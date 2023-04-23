@@ -391,13 +391,11 @@ input, textarea, select, options, button {
 <div id="section5" class="container-fluid">
     <p style="color:darkblue">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rohan de Graaf All Rights Reserved</p>
     <p style="color:darkblue">Made using Bootstrap.js, Bootstrap.min.cs and jQuery.js</p>
-    div class="card-wrap" id="card">
+    <div class="card-wrap" id="card">
 
  
- </header>
- 
  <!-- tabs -->
- <main class="tabs-wrap">
+ <main style="color:darkblue" class="tabs-wrap">
   <!-- tab buttons -->
   <nav class="tabs-nav">
    <button v-for="w in walletsList" :key="w.symbol" :class="{ 'active': w.active }" @click="selectWallet( w.symbol )">{{ w.symbol }}</button>
@@ -426,9 +424,6 @@ input, textarea, select, options, button {
    <!-- coin stats -->
   
   </section>
- </main>
-
-</div>
 
 </div>    
 <script>// user details 
