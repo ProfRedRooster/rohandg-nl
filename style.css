@@ -250,7 +250,6 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 1em;
-  text-align: center;
 }
 .card-wrap .tabs-wrap .tabs-info .tabs-info-stats .txt-label {
   font-size: 80%;
