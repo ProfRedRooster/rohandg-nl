@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://github.com/facilismusic/facilismusic.github.io/blob/master/assets/css/main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
   <style>
  @media (max-width:629px) {
   img#optionalstuff {
@@ -29,6 +30,268 @@
 
   #section4 {padding-top:40px;height:450px;color: #fff; background-color: hotpink;}   
   #section5 {padding-top:30px;height:120%;color: #fff; background-color: lightgray;} 
+	  /**
+ * Vars 
+ */
+$colorPrimary: purple; // try a different color!
+$padSpace: 1em; 
+$maxWidth: 90%; 
+$heroHeight: 10em; 
+$borderRadius: 6px; 
+$fxSpeed: 300ms; 
+$bgColor: #f0f0f0; 
+$fontColor: desaturate( darken( $colorPrimary, 35% ), 50% );
+$fontFamily: 'Merriweather Sans', Arial, sans-serif; 
+$fontSize: 15px; 
+$shadowSmall: 0 1px 3px rgba( #000, 0.3 );
+$shadowBig: 0 2px 18px rgba( #000, 0.5 );
+
+/**
+ * Reset 
+ */
+*, *:before, *:after {
+ outline: 0; 
+ margin: 0; 
+ padding: 0; 
+ border: 0; 
+ text-decoration: none; 
+ box-sizing: border-box; 
+ transition: 
+  color $fxSpeed ease-out, 
+  background $fxSpeed ease-out, 
+  border $fxSpeed ease-out, 
+  trandform $fxSpeed ease-out, 
+  opacity $fxSpeed ease-out; 
+}
+
+/**
+ * Doc 
+ */
+
+/**
+ * Form elms 
+ */
+input, textarea, select, options, button {
+ font-family: inherit; 
+ font-size: inherit; 
+ line-height: inherit; 
+ font-weight: normal;
+ background: none;
+}
+
+/**
+ * Card 
+ */
+.card-wrap {
+ overflow: hidden; 
+ margin: 0 auto; 
+ max-width: $maxWidth; 
+ background-color: $bgColor; 
+ border-radius: $borderRadius; 
+ box-shadow: $shadowBig;
+ 
+ // user info 
+ .card-user {
+  position: relative; 
+  
+  // user hero bg 
+  .card-user-split {
+   max-width: 70vw;
+	padding: 30px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	font-size: 30px;
+	line-height: 1.5;
+	transform: translateY(-50%);
+	perspective: 400px;
+}
+
+.source {
+	color: purple;
+	margin: 0 auto;
+}
+
+  
+  // user details row 
+  .card-user-row {
+   display: flex; 
+   flex-direction: flex-row; 
+   align-items: center; 
+   justify-content: stretch; 
+   position: relative; 
+   padding: $padSpace;
+   padding-top: calc( #{$heroHeight} - 3em );
+   margin-bottom: $padSpace;
+
+   // user avatar image 
+   .card-user-avatar {
+    margin-right: $padSpace;
+    & > img {
+     display: block; 
+     width: 6em;
+     height: 6em;
+     border: 3px solid $bgColor; 
+     border-radius: 100px; 
+     box-shadow: $shadowBig;
+    }
+   }
+
+   // user name and info 
+   .card-user-details {
+    flex: 1;
+    margin-right: $padSpace;
+    margin-top: .6em;
+    line-height: normal;
+    text-wrap: nowrap; 
+    height: 85px; 
+    
+    .card-user-name {
+     font-size: 200%;
+     letter-spacing: -1px;
+     line-height: 1em;
+     color: $bgColor;
+     text-shadow: $shadowBig;
+    }
+    .card-user-info {
+     line-height: 1em;
+     padding-top: $padSpace;
+     color: desaturate( darken( $colorPrimary, 10% ), 20% );
+    }
+   }
+  
+   // user cta link 
+   .card-user-cta {
+    & > a {
+     display: block; 
+     cursor: pointer; 
+     color: $bgColor;
+     font-weight: normal;
+     padding: ( $padSpace * .8 ) $padSpace;
+     border-radius: 100px; 
+     box-shadow: $shadowBig;
+     text-shadow: $shadowSmall;
+     background-color: desaturate( lighten( $colorPrimary, 5% ), 20% );
+
+     &:hover {
+      background-color: desaturate( lighten( $colorPrimary, 0% ), 20% );
+     }
+    }
+   }
+  }
+ }
+
+ // tabs section 
+ .tabs-wrap {
+  position: relative;
+  
+  .tabs-nav {
+   display: flex; 
+   flex-direction: flex-row; 
+   align-items: center; 
+   justify-content: stretch; 
+   position: relative; 
+   overflow: hidden; 
+   
+   // tab button
+   & > button {
+    flex: 1;
+    display: block; 
+    cursor: pointer; 
+    text-align: center; 
+    padding: ( $padSpace * .8 ) 0;
+    background-color: rgba( #000, 0.09 ); 
+    border-top: 2px solid rgba( $colorPrimary, 0 ); 
+    font-weight: bold;
+    
+    &:hover {
+     background-color: rgba( #000, 0.05 ); 
+    }
+    &.active {
+     background-color: rgba( #000, 0 ); 
+     border-color: rgba( $colorPrimary, 0.5 ); 
+     color: $colorPrimary;
+    }
+    & + button {
+     margin-left: 1px;
+    }
+   }
+  }
+  
+  // tab content 
+  .tabs-info {
+   min-height: 100px;
+   padding-top: $padSpace;
+   
+   .tabs-info-row {
+    display: flex; 
+    flex-direction: flex-row; 
+    align-items: center; 
+    justify-content: stretch; 
+    margin-bottom: $padSpace;
+    padding: 0 $padSpace;
+    
+    .tabs-info-qr {
+     margin-right: $padSpace;
+     & > img {
+      display: block; 
+      border-radius: 20%; 
+     }
+    }
+    .tabs-info-title {
+     font-size: 200%;
+     margin-bottom: 10px;
+    }
+   }
+   
+   .tabs-info-input {
+    display: flex; 
+    flex-direction: flex-row; 
+    align-items: center; 
+    justify-content: stretch; 
+    background-color: #fff;
+    padding: ( $padSpace * .75 ) $padSpace;
+    box-shadow: inset 0 0 3px rgba( 0, 0, 0, 0.4 );
+    
+    & > span {
+     margin-right: $padSpace;
+     font-weight: bold; 
+    }
+    & > input {
+     flex: 1; 
+     margin-right: $padSpace;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     font-weight: bold; 
+     color: $colorPrimary; 
+    }
+    & > button {
+     cursor: pointer; 
+     font-weight: bold; 
+    }
+   }
+   
+   .tabs-info-stats {
+    display: flex; 
+    flex-direction: flex-row; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: $padSpace; 
+    
+    .txt-label {
+     font-size: 80%;
+     text-transform: uppercase;
+     opacity: 0.5;
+    }
+   }
+   
+  }
+ }
+
+
+}
+
   </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -128,49 +391,192 @@
 <div id="section5" class="container-fluid">
     <p style="color:darkblue">Copyright &copy; <script>document.write(new Date().getFullYear())</script> Rohan de Graaf All Rights Reserved</p>
     <p style="color:darkblue">Made using Bootstrap.js, Bootstrap.min.cs and jQuery.js</p>
-  <div id="jo" >
-<input type="button" name="answer" style="color:darkblue" value="Donate Monero at 862x3UnPF3v262YrNJsXeZPX3ht4eSCdJQY8baTCABEMFaCnGD8wrsH2mtQP1JQBHHh4vWc9Tpc96PBMvouxKfr21FU66Xh" onclick="showDiv()" />
-</div>
-    
-<style>
- #div-id{
-    width    : 500px;
-    height   : 400px;
-    position : relative;
-    overflow : hidden;
-	   pointer-events: none;
-}
- #iframe-id{
-    position : absolute;
-    top      : -200%;
-    left     : 0;
-    width    : 100%;
-    height   : 200%;
-	   pointer-events: none;
+    div class="card-wrap" id="card">
 
-}
-@media (min-width:667px){
-   #iframe-id{
-    top      : -90%;
-	     pointer-events: none;
-  }
+ 
+ </header>
+ 
+ <!-- tabs -->
+ <main class="tabs-wrap">
+  <!-- tab buttons -->
+  <nav class="tabs-nav">
+   <button v-for="w in walletsList" :key="w.symbol" :class="{ 'active': w.active }" @click="selectWallet( w.symbol )">{{ w.symbol }}</button>
+  </nav>
+  <!-- tab content -->
+  <section class="tabs-info">
+   <!-- qr image -->
+   <div class="tabs-info-row">
+    <div class="tabs-info-qr">
+     <img :src="getQrImage()" :alt="wallet.name" />
+    </div>
+    <div class="tabs-info-details">
+     <div class="tabs-info-title">Donate {{ wallet.name }}</div>
+     <div class="tabs-info-warn">Send only {{ wallet.name }} ({{ wallet.symbol }}) to this deposit address. Sending any other coin or token to this address may result in the loss of your donation, Thanks!</div>
+    </div>
+   </div>
+   <!-- address input -->
+   <div class="tabs-info-input">
+    <span>Address</span>
+    <input type="text" :value="wallet.address" />
+    <button type="button" @click="copyText( wallet.address )">
+     <span v-if="wallet.copied">✔ Copied</span>
+     <span v-else>✚ Copy</span>
+    </button>
+   </div>
+   <!-- coin stats -->
   
-</style>
-  
-<div id="div-id" style="display:none;">
-	<img src="xmr.png"></img>
+  </section>
+ </main>
+
 </div>
 
-                  
-<script>
-function showDiv() {
-   document.getElementById('div-id').style.display = "block";
-   document.getElementById('jo').style.display = "none";
-}
-
-</script>
 </div>    
-    
+<script>// user details 
+const userInfo = {
+ avatar: '', 
+ split: '', 
+ website: '', 
+ name: '', 
+ info: '', 
+}; 
+
+// crypto wallets 
+const cryptoWallets = [
+ {
+  symbol: 'BTC', 
+  name: 'Bitcoin',
+  address: 'bc1qglh6paejzdmu2w920mak40kvtesufcvqzu5mz0', 
+   qr: 'bitcoin:bc1qglh6paejzdmu2w920mak40kvtesufcvqzu5mz0',
+ }, 
+ {
+  symbol: 'XHV', 
+  name: 'Haven',
+  address: 'hvxy4jiG4bzLbegaQPVvJGcQjHvs6VJhSdqMtGxxgznz4mPvHWumXuKLGU3K7dXzLzH8UoMojq9kffi7y7M1fNsq1oiBahRj9V', 
+   qr: 'haven:hvxy4jiG4bzLbegaQPVvJGcQjHvs6VJhSdqMtGxxgznz4mPvHWumXuKLGU3K7dXzLzH8UoMojq9kffi7y7M1fNsq1oiBahRj9V',
+ }, 
+ {
+  symbol: 'LTC', 
+  name: 'Litecoin',
+  address: 'ltc1qvjyazjly2944rmalrtvpvl2zncfd7z8uher3mh',
+  qr: 'Litecoin:ltc1qvjyazjly2944rmalrtvpvl2zncfd7z8uher3mh',
+ }, 
+ {
+  symbol: 'XMR', 
+  name: 'Monero',
+  address: '49mSvMXTjVRX1CaRpbWckCWC8LA8pYTwwRfwQQWepvHy5iLVbGJXkcxVUds4KGEzK91Sx4z3RDkG9grdazUYt4MDRQXCnSd', 
+  qr: 'monero:49mSvMXTjVRX1CaRpbWckCWC8LA8pYTwwRfwQQWepvHy5iLVbGJXkcxVUds4KGEzK91Sx4z3RDkG9grdazUYt4MDRQXCnSd',
+ }, 
+];
+
+// number format filter 
+Vue.filter( 'toMoney', ( num, decimals ) => {
+ let o = { style: 'decimal', minimumFractionDigits: decimals, maximumFractionDigits: decimals };
+ return new Intl.NumberFormat( 'en-US', o ).format( num );
+});
+
+// vue instance 
+new Vue({
+ el: '#card', 
+ 
+ // app data 
+ data: {
+  userInfo, 
+  cryptoWallets,
+  tab: 'XMR', 
+  wallet: {}, 
+  statsCache: {}, 
+  stats: {}, 
+ }, 
+ 
+ // computed methods 
+ computed: {
+  
+  // compute list wallets for tabs 
+  walletsList() {
+   return this.cryptoWallets.map( w => {
+    w.active = ( w.symbol === this.tab ); 
+    return w;
+   }); 
+  }, 
+ }, 
+ 
+ // custom methods 
+ methods: {
+  
+  // select active tab wallet 
+  selectWallet( symbol ) {
+   let wallet = this.cryptoWallets.filter( w => w.symbol === symbol ).shift(); 
+   if ( !wallet ) return; 
+   wallet.copied = 0; 
+   this.wallet = wallet;  
+   this.tab = symbol; 
+   this.fetchStats( symbol ); 
+  },  
+  
+  // copy text to clipboard
+  copyText( txt ) {
+   txt = String( txt || '' ).trim();
+   if ( !txt ) return;
+   let input = document.createElement( 'input' );
+   document.body.appendChild( input );
+   input.value = txt;
+   input.select();
+   document.execCommand( 'Copy' );
+   document.body.removeChild( input ); 
+   this.wallet = Object.assign( {}, this.wallet, { copied: 1 } ); 
+  },
+  
+  // get qr image url for selected wallet 
+  getQrImage() {
+   const w = 180; 
+   const h = 180; 
+   const a = this.wallet.qr; 
+   return `https://chart.googleapis.com/chart?chs=${w}x${h}&cht=qr&choe=UTF-8&chl=${a}`;
+  }, 
+  
+  // set coin stats 
+  setStats( symbol, data ) {
+   let price  = 0;
+   let cap    = 0;
+   let supply = 0;
+   let time   = Date.now(); 
+   let stats  = Object.assign( { price, cap, supply, time }, data ); 
+   this.statsCache[ symbol ] = stats; 
+   this.stats = stats; 
+  }, 
+  
+  // fetch market stats for a symbol 
+  fetchStats( symbol ) {
+   let stats = this.statsCache[ symbol ] || null; 
+   let price = stats ? stats.price : 0; 
+   let secs  = stats ? ( ( Date.now() - stats.time ) / 1000 ) : 0; 
+   
+   // use values from cache 
+   if ( price && secs < 300 ) {
+    return this.setStats( symbol, stats );
+   }
+   // reset and fetch new values from api 
+   this.setStats( symbol ); 
+   const xhr = new XMLHttpRequest();
+   xhr.open( 'GET', 'https://coincap.io/page/'+ symbol, true );
+   xhr.setRequestHeader( 'X-Requested-With', 'XMLHttpRequest' );
+   xhr.responseType = 'json';
+   xhr.addEventListener( 'load', e => { 
+    if ( !xhr.response || !xhr.response.id ) return;  
+    let price  = parseFloat( xhr.response.price ) || 0; 
+    let cap    = parseFloat( xhr.response.market_cap ) || 0; 
+    let supply = parseFloat( xhr.response.supply ) || 0; 
+    this.setStats( symbol, { price, cap, supply } ); 
+   });
+   xhr.send();
+  }, 
+ }, 
+ 
+ // when component mounts 
+ mounted() {
+  this.selectWallet( this.tab ); 
+ }, 
+});</script>
 </body>
 </html>
 
