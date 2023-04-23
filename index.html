@@ -139,7 +139,7 @@
      <!-- address input -->
      <div class="tabs-info-input">
       <span>Address</span>
-      <input type="text" :value="wallet.address" />
+      <input readonly="readonly" type="text" :value="wallet.address" />
       <button type="button" @click="copyText( wallet.address )">
        <span v-if="wallet.copied">✔ Copied</span>
        <span v-else>✚ Copy</span>
