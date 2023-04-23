@@ -111,7 +111,7 @@ button {
   font-size: 30px;
   line-height: 1.5;
   transform: translateY(-50%);
-  perspective: 800px;
+  perspective: 850px;
 }
 .card-wrap .card-user .source {
   margin: 0 auto;
