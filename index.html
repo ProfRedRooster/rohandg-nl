@@ -37,21 +37,7 @@
       <li><a href="#section4">Contact</a></li>
       <li><a href="#section45">Donate</a></li>
       <li><a href="https://www.mostsecure.rohandg.nl">Login</a></i>
-      <div class="col-lg-6 m-auto">
-<strong><span style="text-decoration: underline;">Public</span>&nbsp;Github Projects</strong><p id="github-projects">19</p>
-<script>
-    var url = "https://api.github.com/users/profredrooster/repos";
-    fetch(url)
-        .then(res => res.json())
-        .then(out => {
-            var num = Object.keys(out).length;
-        
-            document.getElementById("github-projects").innerHTML = num;
-        })
-        .catch(err => console.log(err));
-</script>
-      </ul>
-    </div>
+      
    </div>
   </div>
  </nav>
@@ -64,7 +50,18 @@
 
  <div id="section1" class="container-fluid">
 
-  <h1 style="color:darkblue">Public projects</h1>
+   <h1 style="color:darkblue">Public projects:</h1><h1 id="github-projects"></h1>
+<script>
+    var url = "https://api.github.com/users/profredrooster/repos";
+    fetch(url)
+        .then(res => res.json())
+        .then(out => {
+            var num = Object.keys(out).length;
+        
+            document.getElementById("github-projects").innerHTML = num;
+        })
+        .catch(err => console.log(err));
+   </script>
   <img id="optionalstuff" src="https://ghchart.rshah.org/409ba5/profredrooster" alt="Profredrooster Github Chart" />
   <ul style="color:darkblue">
    <li><a href="http://app.rohandg.nl:8880/api/v1/t/3ec1a5d3d7d85d2e29f4baedbdd4e7ba83cf1f4e/d60a456a/fit_2048" target="_blank" rel="noopener noreferrer" style="color:darkblue">DIY Hydrogen generator</a></li>
