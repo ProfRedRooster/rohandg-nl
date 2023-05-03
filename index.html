@@ -37,8 +37,20 @@
       <li><a href="#section4">Contact</a></li>
       <li><a href="#section45">Donate</a></li>
       <li><a href="https://www.mostsecure.rohandg.nl">Login</a></i>
-
-     </ul>
+      <div class="col-lg-6 m-auto">
+<strong><span style="text-decoration: underline;">Public</span>&nbsp;Github Projects</strong><p id="github-projects">19</p>
+<script>
+    var url = "https://api.github.com/users/profredrooster/repos";
+    fetch(url)
+        .then(res => res.json())
+        .then(out => {
+            var num = Object.keys(out).length;
+        
+            document.getElementById("github-projects").innerHTML = num;
+        })
+        .catch(err => console.log(err));
+</script>
+      </ul>
     </div>
    </div>
   </div>
