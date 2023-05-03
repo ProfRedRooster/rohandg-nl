@@ -50,18 +50,7 @@
 
  <div id="section1" class="container-fluid">
 
-   <div><h1 style="color:darkblue">Public projects:</h1><h1 style="color:darkblue" id="github-projects"></h1></div>
-<script>
-    var url = "https://api.github.com/users/profredrooster/repos";
-    fetch(url)
-        .then(res => res.json())
-        .then(out => {
-            var num = Object.keys(out).length;
-        
-            document.getElementById("github-projects").innerHTML = num;
-        })
-        .catch(err => console.log(err));
-   </script>
+  <h1 style="color:darkblue">Public projects</h1>
   <img id="optionalstuff" src="https://ghchart.rshah.org/409ba5/profredrooster" alt="Profredrooster Github Chart" />
   <ul style="color:darkblue">
    <li><a href="http://app.rohandg.nl:8880/api/v1/t/3ec1a5d3d7d85d2e29f4baedbdd4e7ba83cf1f4e/d60a456a/fit_2048" target="_blank" rel="noopener noreferrer" style="color:darkblue">DIY Hydrogen generator</a></li>
