@@ -1,4 +1,4 @@
-onst userInfo = {
+const userInfo = {
  avatar: "",
  split: "",
  website: "",
@@ -130,6 +130,7 @@ new Vue({
    // reset and fetch new values from api
    this.setStats(symbol);
    const xhr = new XMLHttpRequest();
+   xhr.open("GET", "https://coincap.io/page/" + symbol, true);
    xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
    xhr.responseType = "json";
    xhr.addEventListener("load", (e) => {
