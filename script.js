@@ -1,4 +1,4 @@
-const userInfo = {
+onst userInfo = {
  avatar: "",
  split: "",
  website: "",
@@ -106,8 +106,42 @@ new Vue({
    return `https://chart.googleapis.com/chart?chs=${w}x${h}&cht=qr&choe=UTF-8&chl=${a}`;
   },
 
- 
+  // set coin stats
+  setStats(symbol, data) {
+   let price = 0;
+   let cap = 0;
+   let supply = 0;
+   let time = Date.now();
+   let stats = Object.assign({ price, cap, supply, time }, data);
+   this.statsCache[symbol] = stats;
+   this.stats = stats;
+  },
 
+  // fetch market stats for a symbol
+  fetchStats(symbol) {
+   let stats = this.statsCache[symbol] || null;
+   let price = stats ? stats.price : 0;
+   let secs = stats ? (Date.now() - stats.time) / 1000 : 0;
+
+   // use values from cache
+   if (price && secs < 300) {
+    return this.setStats(symbol, stats);
+   }
+   // reset and fetch new values from api
+   this.setStats(symbol);
+   const xhr = new XMLHttpRequest();
+   xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+   xhr.responseType = "json";
+   xhr.addEventListener("load", (e) => {
+    if (!xhr.response || !xhr.response.id) return;
+    let price = parseFloat(xhr.response.price) || 0;
+    let cap = parseFloat(xhr.response.market_cap) || 0;
+    let supply = parseFloat(xhr.response.supply) || 0;
+    this.setStats(symbol, { price, cap, supply });
+   });
+   xhr.send();
+  }
+ },
 
  // when component mounts
  mounted() {
