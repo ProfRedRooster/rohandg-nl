@@ -103,7 +103,7 @@ new Vue({
    const w = 180;
    const h = 180;
    const a = this.wallet.qr;
-   return `https://chart.googleapis.com/chart?chs=${w}x${h}&cht=qr&choe=UTF-8&chl=${a}`;
+   return `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${a}`;
   },
 
   // set coin stats
