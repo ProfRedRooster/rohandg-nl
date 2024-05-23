@@ -6,9 +6,21 @@
 body {
   position: relative;
 }
-
-
-
+        .tor-notice {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 2px solid #ccc;
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .tor-notice a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .tor-notice a:hover {
+            text-decoration: underline;
+        }
 #section0 {
   padding-top: 50px;
   height: 200px;
