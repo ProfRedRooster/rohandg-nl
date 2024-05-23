@@ -15,7 +15,7 @@ body {
             margin-top: 20px;
         }
         .tor-notice a {
-            color: #007bff;
+            color: green;
             text-decoration: none;
         }
         .tor-notice a:hover {
