@@ -14,43 +14,90 @@
   <meta property="og:url" content="https://rohandg.nl">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="https://incendere.nl/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <style>
-    .project-card {
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 15px;
-      margin: 15px 0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s;
-    }
-    .project-card:hover {
-      transform: scale(1.02);
-    }
-    .project-card h3 {
-      margin-top: 0;
-    }
-    .project-card p {
-      margin-bottom: 10px;
-    }
-    .project-card a {
-      color: #337ab7;
-      text-decoration: none;
-    }
-    .project-card a:hover {
-      text-decoration: underline;
-    }
-     .contact-icons a {
-      color: #333;
-      text-decoration: none;
-      font-size: 24px;
-      margin: 0 10px;
-    }
-    .contact-icons a:hover {
-      color: #337ab7;
-    }
-  </style>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+  }
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    color: #337ab7;
+  }
+
+  .project-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .project-card:hover {
+    transform: scale(1.05);
+  }
+
+  .project-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+  }
+
+  .project-card p {
+    margin: 0 0 5px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .project-card a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .project-card a:hover {
+    text-decoration: underline;
+  }
+
+  .table-responsive {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+</style>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
